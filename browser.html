@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Bowser Compatability</h1>
+	<button onclick="myFunction()">Click Here</button>
+
+	<script>
+		function myFunction() 
+		{
+			var objAgent = navigator.userAgent; 
+			var d = objAgent.indexOf("Edge");
+			var o = objAgent.indexOf("OPR");
+			var v = objAgent.indexOf("Vivaldi");
+			var f = objAgent.indexOf("Firefox");
+			var c = objAgent.indexOf("Chrome");
+ 
+			if (c!=-1 && d==-1 && o==-1 && v==-1 && f==-1) 
+    		{ 
+    			window.open("https://www.google.com");
+    		}
+    		else
+    		{
+    			alert("cannot support this file. please open in Chrome");
+    		}
+    
+		}
+	</script>
+</body>
+</html>
+
