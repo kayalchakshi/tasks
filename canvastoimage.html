@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>CanvasToImage</title>
+    </head>
+
+    <body>
+        <canvas id="mycan" width="300" height="300" style="border: 1px solid red">
+
+        </canvas>
+<!-- <button id="but" onclick="convert()">Convert to Image</button>  -->
+        <script>
+            var can = document.getElementById('mycan');
+            var ctx = can.getContext('2d');
+
+            ctx.fillStyle="plum";
+
+            ctx.fillRect(100,100,100,100);
+            
+            convert();
+
+
+            function convert()
+            {
+                var link = document.createElement('a');
+                link.innerHTML = 'download image';
+                link.addEventListener('click', function(ev) {
+                    link.href = can.toDataURL();
+                    link.download = "pic.png";
+                }, false);
+                document.body.appendChild(link);
+            }
+                
+        </script>
+    </body>
+</html>
