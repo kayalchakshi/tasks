@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Smiley</title>
+    </head>
+    <body onload="draw()">
+        <canvas id="mycan" width="1000" height="1000"></canvas>
+        <script>
+            function draw()
+            {
+                var c = document.getElementById("mycan");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.moveTo(150,50);
+                ctx.quadraticCurveTo(50,50,50,125);
+                ctx.quadraticCurveTo(50,200,100,200);
+                ctx.quadraticCurveTo(100,240,60,250);
+                ctx.quadraticCurveTo(120,240,130,200);
+                ctx.quadraticCurveTo(250,200,250,125);
+                ctx.quadraticCurveTo(250,50,150,50);
+                ctx.stroke();
+            }
+        </script>
+        </body>
+        </html>
