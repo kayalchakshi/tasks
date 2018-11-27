@@ -1,0 +1,119 @@
+<html>
+    <head>
+            <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+            body {
+            padding: 1rem;
+            }
+            main{
+            max-width: 500px;
+            margin: 0 auto;
+            }
+            article {
+            margin: 1rem 0;
+            }
+            img{
+                height: 200px;
+                width: 200px
+            }
+            @supports (display: grid) {
+            main { 
+                max-width: 10000px;
+                margin: 0;
+            }
+            article {
+                margin: 0;
+            }
+            .deals {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-gap: 1rem;
+            }
+            }
+            
+            .deals {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            }
+            .sale-item {
+            display: flex;
+            flex-flow: column;
+            border:  3px solid rgb(0, 0, 0);
+            border-radius: 1rem;
+            padding: 2rem;
+            }
+            .sale-item > h1 {
+            order:1;
+            text-decoration: underline;
+            margin: 1rem 1rem 1rem;
+            }
+            .sale-item > p {
+            order:3;
+            margin: 0.25em 1rem 1rem;
+            }
+            .sale-item > img {
+            order: 2;
+            align-self: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main class="deals">
+                <article class="sale-item">
+                    <h1>Cherry</h1>
+                    <p>Cherries are stone fruits - just like their friends the apricots. 
+                        A cherry tree can carry on producing fruit for 100 years! 
+                        Cherries grow from stalks in pairs. Ahhh! Sweet ones like the Bing 
+                        cherry are nicest on their own or in a fruit salad. 
+                        Sour ones like Morello cherries are tastier cooked.</p>
+                        <img src="https://riveridgeproduce.com/wp-content/uploads/2017/05/cherries.jpg">
+                </article>
+                <article class="sale-item">
+                    <h1>Nuts</h1>
+                    <p>Your brain looks like a giant walnut. 
+                        To make it grow it needs protein, which is found in nuts!
+                        A nut is actually a fruit, or the seed of a fruit. 
+                        There are lots of different kinds but they all have a hard, 
+                        dry shell around a kernel (the part of the nut you eat). 
+                        A Brazil nut tree can live for 500 years!</p>
+                        <img src="https://www.pittmandavis.com/images/xl/nutnutsnutsandnuts-buy-nut-gifts-online-110717.jpg?v=100003354007-1">
+                </article>
+                <article class="sale-item">
+                    <h1>Broccoli</h1>
+                    <p>Broccoli is closely related to cabbage - and it's another 
+                        one of those 'greens' we're always being told to eat up. 
+                        The part of a broccoli plant we normally eat is the lovely 
+                        flowerhead - the flowers are usually green but sometimes purple. 
+                        Steamed broccoli is tasty in a salad or stir-fry.</p>
+                        <img src="https://charliesfruitonline.com.au/wp-content/uploads/2013/10/e56e1537-529a-4187-8eba-34834ac1e2c1.jpg">
+                </article>
+                <article class="sale-item">
+                    <h1>Avocado</h1>
+                    <p>It is sometimes called an avocado pear. 
+                        Avocado is often mistaken for a vegetable because 
+                        we eat it like a salad vegetable, but it is actually a fruit. 
+                        Avocados are at their best when they are ripe and very easy to prepare. 
+                        They can simply be cut in half with the stone removed and eaten 
+                        with a little salad dressing or chopped into a salad. 
+                        Avocados are a good source of essential fats (the good ones) - 
+                        one of the few fruits or vegetables that contain fat.</p>
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/28/12/istock-637364836.jpg">
+                </article>
+                <article class="sale-item">
+                    <h1>Fennel</h1>
+                    <p>This vegetable tastes a bit like liquorice! 
+                        Fennel is a plant that grows in the ground. 
+                        A bulb shape grows at the base of the plant, 
+                        and this is the part that you eat. Raw fennel adds a 
+                        super crunchy taste to salads. You can also slice it and cook 
+                        it like onion or celery to use in casseroles. 
+                        The feathery leaves and seeds add flavouring to cooking, just like herbs.</p>
+                        <img src="https://www.landrethseed.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/f/e/fennel-1.jpg">
+                </article>
+        </main>
+    </body>
+</html>
