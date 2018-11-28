@@ -1,0 +1,66 @@
+<html>
+    <body>
+        <canvas id="canvas" style="border: 2px solid ; width: 400;height: 400"></canvas>
+        <script>
+            var canvas= document.getElementById("canvas");
+            canvas.width = canvas.scrollWidth;
+            canvas.height = canvas.scrollHeight;
+            var ctx = canvas.getContext('2d');
+
+            // for(var i=0; i<500;i++){
+            //     var u = Math.random()* window.innerWidth;
+            //     var v = Math.random() * window.innerHeight;
+            //     ctx.fillStyle="#FA8072";
+            //     ctx.beginPath();
+            //     ctx.arc(u,v,3,0,Math.PI *2);
+            //     ctx.fill();
+            // }
+
+                function Circle(x,y,dx,dy,radius){
+                    this.draw = function(){
+                        ctx.beginPath();
+                        ctx.arc(x , y , radius ,0 ,Math.PI * 2 ,false);
+                        ctx.fillStyle="#DAF7A6";
+                        ctx.fill();
+                    }
+                    this.update = function(){
+                        if(x + radius > 400 || x - radius < 0)
+                            {
+                                dx = -dx;
+                            }
+                        if(y + radius > 400 || y - radius < 0)
+                            {
+                                dy = -dy;
+                            }
+                        x += dx;    
+                        y += dy;
+                        this.draw();
+                    }
+                }
+
+                circlearray = [];
+                for(var i=0; i<100;i++){
+
+                    var a = Math.random() * 400;
+                    var b = Math.random() * 400;
+                    var da = (Math.random() - 0.5) * 8;
+                    var db = (Math.random() - 0.5) * 8;
+                    var radius = 10;
+                    circlearray.push(new Circle(a, b, da, db,radius));
+                }
+                    function animate(){
+                        requestAnimationFrame(animate);
+                        ctx.clearRect(0,0,400,400);
+
+                        // ctx.beginPath();
+                        // ctx.arc(200 ,200 , 20 ,0 ,Math.PI * 2 ,false);
+                        // ctx.fillStyle="#008080";
+                        // ctx.fill();
+                        
+                        for(var j = 0; j <= circlearray.length; j++)
+                        circlearray[j].update();    
+                    }
+                animate();
+        </script>
+    </body>
+</html>
