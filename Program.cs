@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// image compression code
+
+
 namespace imagecomp
 {
     class Program
